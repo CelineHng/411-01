@@ -7,10 +7,11 @@ colors
   fill: red;
 }
 
-
 .axis text {
   font: 10px sans-serif;
   fill: black;
+  font-family: "Times New Roman", Times, serif;
+
 }
 
 .axis.x path {
@@ -19,4 +20,5 @@ colors
 
 .axis.y text {
   text-anchor: end;
+  font-family: "Times New Roman", Times, serif;
 }
