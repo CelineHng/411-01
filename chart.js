@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var chart = svg.append('g')
         .attr('transform', `translate(${ margin.left }, ${ margin.top })`);
 
-    colors = ['steelblue', 'green', 'yellow', 'red'];
+    colors = ['DodgerBlue', 'MediumSeaGreen', 'Orange', 'Tomato'];
 
     chart.append('g')
       .attr('transform', `translate(0, ${ height })`)
