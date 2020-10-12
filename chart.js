@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', () => {
+{
   var render = (selector, size, data) => {
     var margin = size.margin;
     var width = size.width - margin.left - margin.right;
