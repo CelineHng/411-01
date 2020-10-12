@@ -42,6 +42,7 @@
         .attr("width", x.bandwidth())
         .attr("y", function(d) { return y(d.data2); })
         .attr("height", function(d) { return height - y(d.data2); });
+        .style{ fill: steelblue; }
 
     // add the x Axis
     svg.append("g")
@@ -53,3 +54,5 @@
         .call(d3.axisLeft(y));
 
   });
+
+
