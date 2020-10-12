@@ -12,10 +12,6 @@
     var y = d3.scaleLinear()
       .domain([0, d3.max(data, d => d.frequency)])
       .range([height, 0]);
-      
-
-    
-
 
     var xAxis = d3.axisBottom(x);
     
