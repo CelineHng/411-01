@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     var height = size.height - margin.top - margin.bottom;
     
     var x = d3.scaleBand()
-      .domain(data.map(d => d.letter))
+      .domain(data.map(d => d.x))
       .rangeRound([0, width])
       .padding(0.1);
       
     var y = d3.scaleLinear()
-      .domain([0, d3.max(data, d => d.frequency)])
+      .domain([0, d3.max(data, d => d.y)])
       .range([height, 0]);
 
     var xAxis = d3.axisBottom(x);
@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .data(data)
         .enter().append('rect')
         .attr('class', 'bar')
-        .attr('x', d => x(d.letter))
+        .attr('x', d => x(d.x))
         .attr('width', x.bandwidth())
-        .attr('y', d => y(d.frequency))
-        .attr('height', d => height - y(d.frequency))
+        .attr('y', d => y(d.y))
+        .attr('height', d => height - y(d.y))
         .attr('fill', function (d, i) { return colors[i] })
 
   }
