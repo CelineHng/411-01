@@ -1,18 +1,18 @@
 [  
    {  
-      "letter":11,
-      "frequency":2
+      "x":11,
+      "y":2
    },
    {  
-      "letter":22,
-      "frequency":4
+      "x":22,
+      "y":4
    },
    {  
-      "letter":33,
-      "frequency":1
+      "x":33,
+      "y":1
    },
    {  
-      "letter":44,
-      "frequency":5
+      "x":44,
+      "y":5
    }
 ]
