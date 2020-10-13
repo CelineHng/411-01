@@ -22,20 +22,3 @@ colors
   text-anchor: end;
   font-family: "Times New Roman", Times, serif;
 }
-
-#chart2 {
-  background-color: rgb(253, 251, 240);
-}
-
-colors
-#chart2 rect {
-  fill: red;
-}
-.axis.n path {
-  display: none;
-}
-
-.axis.m text {
-  text-anchor: end;
-  font-family: "Times New Roman", Times, serif;
-}
