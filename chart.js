@@ -79,18 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
     var width = size.width - margin.left - margin.right;
     var height = size.height - margin.top - margin.bottom;
     
-    var x = d3.scaleBand()
-      .domain(data.map(d => d.x))
+    var n = d3.scaleBand()
+      .domain(data.map(d => d.n))
       .rangeRound([0, width])
       .padding(0.1);
       
-    var y = d3.scaleLinear()
-      .domain([0, d3.max(data, d => d.y)])
+    var m = d3.scaleLinear()
+      .domain([0, d3.max(data, d => d.m)])
       .range([height, 0]);
 
-    var xAxis = d3.axisBottom(x);
+    var nAxis = d3.axisBottom(n);
     
-    var yAxis = d3.axisLeft(y)
+    var mAxis = d3.axisLeft(m)
       .ticks(10);
     
     var svg = d3.select(selector)
@@ -104,17 +104,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     chart.append('g')
       .attr('transform', `translate(0, ${ height })`)
-      .attr('class', 'axis x')
-      .call(xAxis);
+      .attr('class', 'axis n')
+      .call(nAxis);
       
     chart.append('g')
-      .attr('class', 'axis y')
-      .call(yAxis);
+      .attr('class', 'axis m')
+      .call(mAxis);
     
     chart.append("text")
           .attr("transform", "translate(100,0)")
-          .attr("x", 80)
-          .attr("y", 1)
+          .attr("n", 80)
+          .attr("m", 1)
           .attr("font-size", "20px")
           .attr("class", "title")
           .text("DATA")
@@ -124,10 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .data(data)
         .enter().append('rect')
         .attr('class', 'bar')
-        .attr('x', d => x(d.x))
-        .attr('width', x.bandwidth())
-        .attr('y', d => y(d.y))
-        .attr('height', d => height - y(d.y))
+        .attr('n', d => n(d.n))
+        .attr('width', n.bandwidth())
+        .attr('m', d => m(d.m))
+        .attr('height', d => height - m(d.m))
         .attr('fill', function (d, i) { return colors[i] })
 
   }
