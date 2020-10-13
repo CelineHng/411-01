@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .attr('height', d => height - y(d.y))
         .attr('fill', function (d, i) { return colors[i] })
 
-  }
+  
   
   fetch('data.json')
     .then(data => data.json())
