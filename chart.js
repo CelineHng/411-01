@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     var svg = d3.select(selector)
       .attr('width', size.width)
-      .attr('height', size.height)
+      .attr('height', size.height);
       
     var chart = svg.append('g')
         .attr('transform', `translate(${ margin.left }, ${ margin.top })`);
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
           .attr("y", 1)
           .attr("font-size", "20px")
           .attr("class", "title")
-          .text("DATA")
+          .text("DATA");
 
 
     chart.selectAll('.bar')
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .attr('width', x.bandwidth())
         .attr('y', d => y(d.y))
         .attr('height', d => height - y(d.y))
-        .attr('fill', function (d, i) { return colors[i] })
+        .attr('fill', function (d, i) { return colors[i] });
 
   
   
