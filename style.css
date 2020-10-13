@@ -1,9 +1,9 @@
-#chart {
+#chart1 {
   background-color: rgb(253, 251, 251);
 }
 
 colors
-#chart rect {
+#chart1 rect {
   fill: red;
 }
 
@@ -23,7 +23,14 @@ colors
   font-family: "Times New Roman", Times, serif;
 }
 
+#chart2 {
+  background-color: rgb(253, 251, 240);
+}
 
+colors
+#chart2 rect {
+  fill: red;
+}
 .axis.n path {
   display: none;
 }
