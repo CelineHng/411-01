@@ -18,25 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
     var yAxis = d3.axisLeft(y)
       .ticks(10);
     
-    var svg = d3.select(selector)
+    var svg1 = d3.select(selector)
       .attr('width', size.width)
       .attr('height', size.height)
       
-    var chart = svg.append('g')
+    var chart2 = svg1.append('g')
         .attr('transform', `translate(${ margin.left }, ${ margin.top })`);
 
     colors = ['DodgerBlue', 'MediumSeaGreen', 'Orange', 'Tomato'];
 
-    chart.append('g')
+    chart1.append('g')
       .attr('transform', `translate(0, ${ height })`)
       .attr('class', 'axis x')
       .call(xAxis);
       
-    chart.append('g')
+    chart1.append('g')
       .attr('class', 'axis y')
       .call(yAxis);
     
-    chart.append("text")
+    chart1.append("text")
           .attr("transform", "translate(100,0)")
           .attr("x", 80)
           .attr("y", 1)
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
           .text("DATA")
 
 
-    chart.selectAll('.bar')
+    chart1.selectAll('.bar')
         .data(data)
         .enter().append('rect')
         .attr('class', 'bar')
@@ -93,25 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
     var mAxis = d3.axisLeft(m)
       .ticks(10);
     
-    var svg = d3.select(selector)
+    var svg2 = d3.select(selector)
       .attr('width', size.width)
       .attr('height', size.height)
       
-    var chart = svg.append('g')
+    var chart2 = svg2.append('g')
         .attr('transform', `translate(${ margin.left }, ${ margin.top })`);
 
     colors = ['DodgerBlue', 'MediumSeaGreen', 'Orange', 'Tomato'];
 
-    chart.append('g')
+    chart2.append('g')
       .attr('transform', `translate(0, ${ height })`)
       .attr('class', 'axis n')
       .call(nAxis);
       
-    chart.append('g')
+    chart2.append('g')
       .attr('class', 'axis m')
       .call(mAxis);
     
-    chart.append("text")
+    chart2.append("text")
           .attr("transform", "translate(100,0)")
           .attr("n", 80)
           .attr("m", 1)
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
           .text("DATA")
 
 
-    chart.selectAll('.bar')
+    chart2.selectAll('.bar')
         .data(data)
         .enter().append('rect')
         .attr('class', 'bar')
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('data.json')
     .then(data => data.json())
     .then(data => {
-      var settings = {
+      var set = {
         width: 500,
         height: 300,
         margin: {
