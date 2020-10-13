@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .attr('class', 'axis y')
       .call(yAxis);
     
-    chart1.append("text")
+    chart1.append("text1")
           .attr("transform", "translate(100,0)")
           .attr("x", 80)
           .attr("y", 1)
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     chart1.selectAll('.bar')
         .data(data)
-        .enter().append('rect')
+        .enter().append('rect1')
         .attr('class', 'bar')
         .attr('x', d => x(d.x))
         .attr('width', x.bandwidth())
