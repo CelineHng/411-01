@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .attr('y', d => y(d.y))
         .attr('height', d => height - y(d.y))
         .attr('fill', function (d, i) { return colors[i] });
-
+  }
   
   
   fetch('data.json')
@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       
       render('#chart', settings, data);
-    });
  
     
 });
