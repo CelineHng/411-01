@@ -1,0 +1,14 @@
+{
+  "name": "@anatolyg/d3plus-stylish-barchart",
+  "main": "b8077ccf5ba61477@256.js",
+  "version": "256.0.0",
+  "homepage": "https://observablehq.com/@anatolyg/d3plus-stylish-barchart",
+  "author": {
+    "name": "Anatoly Geyfman",
+    "url": "https://observablehq.com/@anatolyg"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
